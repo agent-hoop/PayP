@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Nav.css';
 import { Link } from 'react-router-dom';
 import ProfileDropdown from './ProfileDropdown';
-import { useWallet } from '../context/WalletContext';
+// import { useWallet } from '../context/WalletContext';
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
