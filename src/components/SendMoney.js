@@ -104,7 +104,7 @@ export default function SendMoney({ onNotification }) {
     setErrors({});
     setIsLoading(true);
     
-    const numAmount = parseFloat(amount);
+    // const numAmount = parseFloat(amount);
     
     // Simulate sending with more realistic timing
     setTimeout(() => {
