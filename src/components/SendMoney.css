@@ -1,0 +1,504 @@
+
+/* PayPal Brand Colors */
+:root {
+  --paypal-blue: #003087;
+  --paypal-light-blue: #0070ba;
+  --paypal-gold: #ffc43d;
+  --paypal-dark-gold: #e0ac12;
+  --paypal-gray: #f5f7fa;
+  --paypal-dark-gray: #6c7378;
+  --paypal-white: #ffffff;
+  --paypal-border: #e1e5e9;
+}
+
+.send-money {
+  min-height: calc(100vh - 6rem);
+  background-color: var(--paypal-gray);
+  padding: 2rem 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.step-container {
+  background: var(--paypal-white);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.send-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--paypal-blue);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: var(--paypal-light-blue);
+}
+
+.send-header h1 {
+  color: var(--paypal-blue);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.send-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--paypal-dark-gray);
+  z-index: 1;
+}
+
+.recipient-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid var(--paypal-border);
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  background: var(--paypal-white);
+}
+
+.recipient-input:focus {
+  outline: none;
+  border-color: var(--paypal-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+}
+
+.recipient-input::placeholder {
+  color: var(--paypal-dark-gray);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-section label {
+  color: var(--paypal-blue);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.balance-info {
+  margin-bottom: 0.5rem;
+}
+
+.balance-info span {
+  font-size: 0.9rem;
+  color: var(--paypal-dark-gray);
+  font-weight: 500;
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.amount-input.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.amount-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--paypal-blue);
+  z-index: 1;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid var(--paypal-border);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: var(--paypal-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+}
+
+.note-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--paypal-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  resize: vertical;
+  min-height: 80px;
+  transition: all 0.3s ease;
+}
+
+.note-input:focus {
+  outline: none;
+  border-color: var(--paypal-blue);
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+}
+
+.next-btn, .send-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--paypal-blue);
+  color: var(--paypal-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 50px;
+}
+
+.next-btn:hover:not(:disabled), .send-btn:hover:not(:disabled) {
+  background: #00226d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 48, 135, 0.3);
+}
+
+.next-btn:disabled, .send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.success-animation {
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.form-section {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-section.error {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.amount-input-container .currency-symbol {
+  transition: color 0.3s ease;
+}
+
+.amount-input:focus + .currency-symbol {
+  color: var(--paypal-light-blue);
+}
+
+/* Search Results Dropdown */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--paypal-white);
+  border: 2px solid var(--paypal-border);
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  max-height: 300px;
+  margin-top:.2rem;
+  overflow-y: auto;
+}
+.default-avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0070ba;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:hover {
+  background-color: var(--paypal-gray);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.user-avatar {
+  position: relative;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--paypal-border);
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--paypal-white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--paypal-blue);
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.username {
+  color: var(--paypal-dark-gray);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.email {
+  color: var(--paypal-dark-gray);
+  font-size: 0.875rem;
+}
+
+/* Selected User Display in Step 2 */
+.recipient-info {
+  text-align: center;
+}
+
+.selected-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-avatar-small {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.user-avatar-small img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--paypal-white);
+}
+
+.verified-badge-small {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  background: var(--paypal-white);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.selected-user h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.recipient-email {
+  margin: 0;
+  color: var(--paypal-dark-gray);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Input Container Positioning */
+.input-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .send-money {
+    padding: 1rem;
+  }
+
+  .step-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .send-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-btn {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .recipient-input, .amount-input, .note-input {
+    padding: 0.875rem;
+  }
+
+  .recipient-input {
+    padding-left: 2.5rem;
+  }
+
+  .amount-input {
+    padding-left: 2.5rem;
+  }
+
+  .search-result-item {
+    padding: 0.75rem;
+  }
+
+  .user-avatar img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .selected-user {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .selected-user h1,
+  .recipient-email {
+    text-align: center;
+  }
+}

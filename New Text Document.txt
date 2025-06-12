@@ -1,0 +1,10 @@
+git push origin main
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/agent-hoop/clone-pay.git/'
+
+
+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
+
+
+https://replit.com/@agenthoop1/React-Javascript-2#src/components/Nav.jsx

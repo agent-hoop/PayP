@@ -1,0 +1,166 @@
+
+.payment-success {
+  min-height: calc(100vh - 6rem);
+  background-color: var(--paypal-gray);
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-activity{
+  text-decoration:none;
+}
+.success-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--paypal-white);
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-icon {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.checkmark-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: checkmarkPop 0.6s ease-out 0.2s both;
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+@keyframes checkmarkPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-message {
+  margin-bottom: 3rem;
+}
+
+.success-message h1 {
+  color: var(--paypal-blue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.success-message h2 {
+  color: var(--paypal-blue);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 50px;
+}
+
+.btn-primary {
+  background: var(--paypal-blue);
+  color: var(--paypal-white);
+}
+
+.btn-primary:hover {
+  background: #00226d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 48, 135, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--paypal-blue);
+  border: 2px solid var(--paypal-border);
+}
+
+.btn-secondary:hover {
+  background: var(--paypal-gray);
+  border-color: var(--paypal-blue);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .success-message h1 {
+    font-size: 1.3rem;
+  }
+
+  .success-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .checkmark-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .checkmark-circle svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-container {
+    padding: 2.5rem 1rem;
+  }
+
+  .success-message h1 {
+    font-size: 1.2rem;
+  }
+
+  .success-message h2 {
+    font-size: 1.3rem;
+  }
+}

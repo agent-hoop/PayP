@@ -1,0 +1,273 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --paypal-blue: #003087;
+  --paypal-light-blue: #0070ba;
+  --paypal-gold: #ffc43d;
+  --paypal-dark-gold: #e0ac12;
+  --paypal-white: #ffffff;
+  --paypal-gray: #f5f7fa;
+  --paypal-dark-gray: #6c7378;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  background: linear-gradient(135deg, var(--paypal-blue) 0%, var(--paypal-light-blue) 100%);
+  color: white;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 15px rgba(0, 48, 135, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  position: relative;
+  width: 100%;
+}
+
+/* === Left Section === */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.paypal_logo {
+  width: 130px;
+}
+
+.paypal_logo img {
+  width: 100%;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav_links li {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav_links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav_links li:hover a {
+  color: #ffd700;
+}
+
+/* === Right Section === */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  padding-right: 0.5rem;
+}
+
+.notification {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 40px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.notification:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.notif {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: linear-gradient(135deg, #ff4757, #ff3742);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid var(--paypal-blue);
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  animation: pulse 2s infinite;
+  line-height: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  }
+}
+
+.profile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.profile:hover {
+  transform: scale(1.05);
+}
+
+.profile_pic {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  transition: border-color 0.3s ease;
+}
+
+.profile_pic:hover {
+  border-color: var(--paypal-gold);
+}
+
+/* === Utility Classes === */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* === Mobile Center Icon Logo === */
+.mobile-center-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+}
+
+.mobile-center-logo img {
+  height: 100%;
+}
+
+/* === Hamburger Menu Icon (mobile only) === */
+.mobile-menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .nav_links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    overflow:hidden;
+    width: 280px;
+    background: linear-gradient(180deg, var(--paypal-blue) 0%, var(--paypal-light-blue) 100%);
+    flex-direction: column;
+    padding: 5rem 1.5rem;
+    gap: 2rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 999;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav_links.open {
+    left: 0;
+  }
+
+  .nav_links li {
+    font-size: 1.2rem;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+  }
+  /* === Mobile Close Button === */
+  .mobile-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-close-btn:hover {
+    transform: scale(1.1);
+  }
+}

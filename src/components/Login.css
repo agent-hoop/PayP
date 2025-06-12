@@ -1,0 +1,184 @@
+
+/* PayPal Login Styles */
+.login-page {
+  min-height: 100vh;
+  background: var(--paypal-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-container {
+  background: var(--paypal-white);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px var(--paypal-shadow);
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border: 1px solid var(--paypal-border);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.login-header h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--paypal-text);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: var(--paypal-text-secondary);
+  line-height: 1.4;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--paypal-text);
+}
+
+.form-group input {
+  padding: 13px 16px;
+  border: 1px solid var(--paypal-border);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+  background: var(--paypal-white);
+  color: var(--paypal-text);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--paypal-blue);
+}
+
+.form-group input::placeholder {
+  color: var(--paypal-text-secondary);
+}
+
+.error-message {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.login-btn {
+  background: var(--paypal-blue);
+  color: var(--paypal-white);
+  border: 1px solid var(--paypal-blue);
+  padding: 13px 24px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: var(--paypal-dark-blue);
+  border-color: var(--paypal-dark-blue);
+}
+
+.login-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  margin-top: 24px;
+  text-align: center;
+  border-top: 1px solid var(--paypal-border);
+  padding-top: 16px;
+}
+
+.login-footer p {
+  font-size: 12px;
+  color: var(--paypal-text-secondary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.login-footer p:first-child {
+  font-weight: 500;
+  color: var(--paypal-blue);
+  background: var(--paypal-light-gray);
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .login-page {
+    padding: 16px;
+  }
+
+  .login-container {
+    padding: 32px 24px;
+  }
+
+  .login-header h1 {
+    font-size: 22px;
+  }
+
+  .form-group input {
+    font-size: 16px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+    padding: 15px 24px;
+  }
+}
