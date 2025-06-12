@@ -24,9 +24,8 @@ export default function SendMoney({ onNotification }) {
 
   const validateRecipient = (value) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^\+?[\d\s\-\(\)]{10,}$/;
-    const usernameRegex = /^@[a-zA-Z0-9_]{3,}$/;
-    
+    const phoneRegex = /^\+?[\d\s\-()]{10,}$/;
+    const usernameRegex = /^@[a-zA-Z0-9_]{3,}$/;  
     if (!value.trim()) {
       return 'Recipient is required';
     }
