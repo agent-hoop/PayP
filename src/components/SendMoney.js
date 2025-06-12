@@ -106,6 +106,7 @@ export default function SendMoney({ onNotification }) {
     
     // const numAmount = parseFloat(amount);
     
+    
     // Simulate sending with more realistic timing
     setTimeout(() => {
       const success = deductAmount(amount, recipient, note);
