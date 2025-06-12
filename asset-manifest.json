@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PayP/static/css/main.b4bac640.css",
+    "main.js": "/PayP/static/js/main.36f7fd40.js",
+    "index.html": "/PayP/index.html",
+    "main.b4bac640.css.map": "/PayP/static/css/main.b4bac640.css.map",
+    "main.36f7fd40.js.map": "/PayP/static/js/main.36f7fd40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4bac640.css",
+    "static/js/main.36f7fd40.js"
+  ]
+}
