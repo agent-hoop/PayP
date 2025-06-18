@@ -171,7 +171,7 @@ export default function SendMoney({ onNotification }) {
   // Real-time validation
   React.useEffect(() => {
     if (currentStep === 2) {
-      const amountError = validateAmount(amount);
+      const amountError = (amount);
       setIsFormValid(!amountError && amount);
     }
   }, [amount, balance, currentStep]);
