@@ -1,5 +1,5 @@
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useWallet } from '../context/WalletContext';
 import './ProfileDropdown.css';
 
@@ -26,7 +26,7 @@ export default function ProfileDropdown({ profilePic, onClose }) {
       </div>
 
       <div className="profile-dropdown-menu">
-        <a href="#" className="dropdown-item">
+        <a href="/" className="dropdown-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
@@ -34,14 +34,14 @@ export default function ProfileDropdown({ profilePic, onClose }) {
           Profile & Settings
         </a>
         
-        <a href="#" className="dropdown-item">
+        <a href="/" className="dropdown-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
           Wallet
         </a>
         
-        <a href="#" className="dropdown-item">
+        <a href="/" className="dropdown-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
             <line x1="16" y1="2" x2="16" y2="6"/>
@@ -51,7 +51,7 @@ export default function ProfileDropdown({ profilePic, onClose }) {
           Activity
         </a>
         
-        <a href="#" className="dropdown-item">
+        <a href="/" className="dropdown-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="12" cy="12" r="3"/>
             <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
@@ -61,7 +61,7 @@ export default function ProfileDropdown({ profilePic, onClose }) {
         
         <div className="dropdown-divider"></div>
         
-        <a href="#" className="dropdown-item">
+        <a href="/" className="dropdown-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="12" cy="12" r="10"/>
             <path d="M12 6v6l4 2"/>
@@ -69,7 +69,7 @@ export default function ProfileDropdown({ profilePic, onClose }) {
           Help & Support
         </a>
         
-        <a href="#" className="dropdown-item logout">
+        <a href="/" className="dropdown-item logout">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
             <polyline points="16,17 21,12 16,7"/>
