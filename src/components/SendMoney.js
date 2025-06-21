@@ -104,8 +104,7 @@ export default function SendMoney({ onNotification }) {
     setErrors({});
     setIsLoading(true);
     
-    // const numAmount = parseFloat(amount);
-    
+    const numAmount = parseFloat(amount);
     
     // Simulate sending with more realistic timing
     setTimeout(() => {
@@ -171,7 +170,7 @@ export default function SendMoney({ onNotification }) {
   // Real-time validation
   React.useEffect(() => {
     if (currentStep === 2) {
-      const amountError = (amount);
+      const amountError = validateAmount(amount);
       setIsFormValid(!amountError && amount);
     }
   }, [amount, balance, currentStep]);

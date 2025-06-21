@@ -8,7 +8,9 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
   const profileRef = useRef(null);
-  const profilePic = useState("https://tessutiitaliano.com/wp-content/uploads/2020/09/What-is-Arabic-Head-Scarf-and-How-to-Wear-an-Arab-Head-Scarf-Male--1200x900.jpg"); // Default profile pic
+  const [profilePic, setProfilePic] = useState("https://tessutiitaliano.com/wp-content/uploads/2020/09/What-is-Arabic-Head-Scarf-and-How-to-Wear-an-Arab-Head-Scarf-Male--1200x900.jpg"); // Default profile pic
+
+  // const profilePic = useState("https://tessutiitaliano.com/wp-content/uploads/2020/09/What-is-Arabic-Head-Scarf-and-How-to-Wear-an-Arab-Head-Scarf-Male--1200x900.jpg"); // Default profile pic
 
   const closeMenu = () => setIsOpen(false);
 
